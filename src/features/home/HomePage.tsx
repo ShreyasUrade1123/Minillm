@@ -1,5 +1,7 @@
 import { useCallback, useRef, useState, useEffect } from 'react'
 import { ScrollSequence } from '@/components/ui/ScrollSequence'
+import { useImagePreloader } from '@/hooks/useImagePreloader'
+import { GlobalLoader } from '@/components/ui/GlobalLoader'
 
 export default function HomePage() {
   const oldStateRef = useRef<HTMLDivElement>(null)
@@ -38,6 +40,21 @@ export default function HomePage() {
       return `/scroll3/ezgif-frame-${scroll3Index.toString().padStart(3, '0')}.jpg`
     }
   }, [])
+
+  const { progress, isLoaded } = useImagePreloader(440, frameUrlGen)
+
+  // Lock scrolling while loading
+  useEffect(() => {
+    if (!isLoaded) {
+      document.body.style.overflow = 'hidden'
+      window.scrollTo(0, 0)
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isLoaded])
 
   const handleProgress = useCallback((progress: number) => {
     if (oldStateRef.current) {
@@ -81,7 +98,9 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="w-full">
+    <>
+      <GlobalLoader progress={progress} isLoaded={isLoaded} />
+      <div className="w-full">
       {/* Scroll Sequence Hero Section */}
       <ScrollSequence
         frameCount={440}
@@ -569,5 +588,6 @@ export default function HomePage() {
         </div>
       </div>
     </div>
+    </>
   )
 }
