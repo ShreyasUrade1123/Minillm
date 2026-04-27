@@ -1,12 +1,17 @@
 import { useState, useEffect } from 'react'
 
-export function useImagePreloader(totalFrames: number, frameUrlGen: (index: number) => string) {
+export function useImagePreloader(
+  totalFrames: number, 
+  frameUrlGen: (index: number) => string,
+  framesToUnlock: number = totalFrames
+) {
   const [progress, setProgress] = useState(0)
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     let isMounted = true
     let loadedCount = 0
+    let hasUnlocked = false
 
     const loadImages = async () => {
       const urls: string[] = []
@@ -15,8 +20,8 @@ export function useImagePreloader(totalFrames: number, frameUrlGen: (index: numb
         urls.push(frameUrlGen(i))
       }
 
-      // Load in batches to prevent network stalling and ensure accurate progress
-      const batchSize = 25
+      // Load in larger batches for faster network utilization
+      const batchSize = 40
       for (let i = 0; i < urls.length; i += batchSize) {
         if (!isMounted) return
         
@@ -26,7 +31,19 @@ export function useImagePreloader(totalFrames: number, frameUrlGen: (index: numb
             const img = new Image()
             const handleFinish = () => {
               loadedCount++
-              if (isMounted) setProgress(Math.floor((loadedCount / totalFrames) * 100))
+              
+              if (isMounted && !hasUnlocked) {
+                const currentProgress = Math.floor((loadedCount / framesToUnlock) * 100)
+                if (currentProgress >= 100) {
+                  hasUnlocked = true
+                  setProgress(100)
+                  setTimeout(() => {
+                    if (isMounted) setIsLoaded(true)
+                  }, 400)
+                } else {
+                  setProgress(currentProgress)
+                }
+              }
               resolve()
             }
             img.onload = handleFinish
@@ -38,12 +55,11 @@ export function useImagePreloader(totalFrames: number, frameUrlGen: (index: numb
         await Promise.all(promises)
       }
       
-      if (isMounted) {
+      if (isMounted && !hasUnlocked) {
         setProgress(100)
-        // Short artificial delay before unmounting for smooth UX
         setTimeout(() => {
           if (isMounted) setIsLoaded(true)
-        }, 600)
+        }, 400)
       }
     }
 
@@ -52,7 +68,7 @@ export function useImagePreloader(totalFrames: number, frameUrlGen: (index: numb
     return () => {
       isMounted = false
     }
-  }, [totalFrames, frameUrlGen])
+  }, [totalFrames, frameUrlGen, framesToUnlock])
 
   return { progress, isLoaded }
 }

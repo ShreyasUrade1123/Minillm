@@ -41,7 +41,9 @@ export default function HomePage() {
     }
   }, [])
 
-  const { progress, isLoaded } = useImagePreloader(440, frameUrlGen)
+  // Only wait for the first 60 frames to be loaded to dismiss the loader.
+  // The remaining 380 frames will continue to seamlessly load in the background!
+  const { progress, isLoaded } = useImagePreloader(440, frameUrlGen, 60)
 
   // Lock scrolling while loading
   useEffect(() => {
