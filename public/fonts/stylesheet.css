@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Evanston Tavern 1858 Light Inline';
+    src: url('EvanstonTavern-1858LtInline.eot');
+    src: local('Evanston Tavern 1858 Light Inline'), local('EvanstonTavern-1858LtInline'),
+        url('EvanstonTavern-1858LtInline.eot?#iefix') format('embedded-opentype'),
+        url('EvanstonTavern-1858LtInline.woff2') format('woff2'),
+        url('EvanstonTavern-1858LtInline.woff') format('woff'),
+        url('EvanstonTavern-1858LtInline.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Evanston Tavern 1858 Medium Inline';
+    src: url('EvanstonTavern-1858MdInline.eot');
+    src: local('Evanston Tavern 1858 Medium Inline'), local('EvanstonTavern-1858MdInline'),
+        url('EvanstonTavern-1858MdInline.eot?#iefix') format('embedded-opentype'),
+        url('EvanstonTavern-1858MdInline.woff2') format('woff2'),
+        url('EvanstonTavern-1858MdInline.woff') format('woff'),
+        url('EvanstonTavern-1858MdInline.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Evanston Tavern 1858 Light Stencil';
+    src: url('EvanstonTavern-1858LtStencil.eot');
+    src: local('Evanston Tavern 1858 Light Stencil'), local('EvanstonTavern-1858LtStencil'),
+        url('EvanstonTavern-1858LtStencil.eot?#iefix') format('embedded-opentype'),
+        url('EvanstonTavern-1858LtStencil.woff2') format('woff2'),
+        url('EvanstonTavern-1858LtStencil.woff') format('woff'),
+        url('EvanstonTavern-1858LtStencil.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Evanston Tavern 1858';
+    src: url('EvanstonTavern-1858Medium.eot');
+    src: local('Evanston Tavern 1858 Medium'), local('EvanstonTavern-1858Medium'),
+        url('EvanstonTavern-1858Medium.eot?#iefix') format('embedded-opentype'),
+        url('EvanstonTavern-1858Medium.woff2') format('woff2'),
+        url('EvanstonTavern-1858Medium.woff') format('woff'),
+        url('EvanstonTavern-1858Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Evanston Tavern 1858 Bold Stencil';
+    src: url('EvanstonTavern-1858BoldStencil.eot');
+    src: local('Evanston Tavern 1858 Bold Stencil'), local('EvanstonTavern-1858BoldStencil'),
+        url('EvanstonTavern-1858BoldStencil.eot?#iefix') format('embedded-opentype'),
+        url('EvanstonTavern-1858BoldStencil.woff2') format('woff2'),
+        url('EvanstonTavern-1858BoldStencil.woff') format('woff'),
+        url('EvanstonTavern-1858BoldStencil.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Evanston Tavern 1858 Inline';
+    src: url('EvanstonTavern-1858RegularInline.eot');
+    src: local('Evanston Tavern 1858 Inline'), local('EvanstonTavern-1858RegularInline'),
+        url('EvanstonTavern-1858RegularInline.eot?#iefix') format('embedded-opentype'),
+        url('EvanstonTavern-1858RegularInline.woff2') format('woff2'),
+        url('EvanstonTavern-1858RegularInline.woff') format('woff'),
+        url('EvanstonTavern-1858RegularInline.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Evanston Tavern 1858 Bold Inline';
+    src: url('EvanstonTavern-1858BoldInline.eot');
+    src: local('Evanston Tavern 1858 Bold Inline'), local('EvanstonTavern-1858BoldInline'),
+        url('EvanstonTavern-1858BoldInline.eot?#iefix') format('embedded-opentype'),
+        url('EvanstonTavern-1858BoldInline.woff2') format('woff2'),
+        url('EvanstonTavern-1858BoldInline.woff') format('woff'),
+        url('EvanstonTavern-1858BoldInline.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Evanston Tavern 1858 Medium Stencil';
+    src: url('EvanstonTavern-1858MdStencil.eot');
+    src: local('Evanston Tavern 1858 Medium Stencil'), local('EvanstonTavern-1858MdStencil'),
+        url('EvanstonTavern-1858MdStencil.eot?#iefix') format('embedded-opentype'),
+        url('EvanstonTavern-1858MdStencil.woff2') format('woff2'),
+        url('EvanstonTavern-1858MdStencil.woff') format('woff'),
+        url('EvanstonTavern-1858MdStencil.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Evanston Tavern 1858 Stencil';
+    src: url('EvanstonTavern-1858RegStncl.eot');
+    src: local('Evanston Tavern 1858 Stencil'), local('EvanstonTavern-1858RegStncl'),
+        url('EvanstonTavern-1858RegStncl.eot?#iefix') format('embedded-opentype'),
+        url('EvanstonTavern-1858RegStncl.woff2') format('woff2'),
+        url('EvanstonTavern-1858RegStncl.woff') format('woff'),
+        url('EvanstonTavern-1858RegStncl.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Evanston Tavern 1858';
+    src: url('EvanstonTavern-1858Regular.eot');
+    src: local('Evanston Tavern 1858'), local('EvanstonTavern-1858Regular'),
+        url('EvanstonTavern-1858Regular.eot?#iefix') format('embedded-opentype'),
+        url('EvanstonTavern-1858Regular.woff2') format('woff2'),
+        url('EvanstonTavern-1858Regular.woff') format('woff'),
+        url('EvanstonTavern-1858Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Evanston Tavern 1858';
+    src: url('EvanstonTavern-1858Bold.eot');
+    src: local('Evanston Tavern 1858 Bold'), local('EvanstonTavern-1858Bold'),
+        url('EvanstonTavern-1858Bold.eot?#iefix') format('embedded-opentype'),
+        url('EvanstonTavern-1858Bold.woff2') format('woff2'),
+        url('EvanstonTavern-1858Bold.woff') format('woff'),
+        url('EvanstonTavern-1858Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Evanston Tavern 1858';
+    src: url('EvanstonTavern-1858Light.eot');
+    src: local('Evanston Tavern 1858 Light'), local('EvanstonTavern-1858Light'),
+        url('EvanstonTavern-1858Light.eot?#iefix') format('embedded-opentype'),
+        url('EvanstonTavern-1858Light.woff2') format('woff2'),
+        url('EvanstonTavern-1858Light.woff') format('woff'),
+        url('EvanstonTavern-1858Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
